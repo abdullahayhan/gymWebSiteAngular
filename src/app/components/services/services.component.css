@@ -1,0 +1,82 @@
+.our_price {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    color: #0b0e13;
+    border-bottom: 1px solid #49bcfe;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.justify-content-center {
+    -webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
+.ftco-feature-1 {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.ftco-feature-1 .icon {
+    font-size: 70px;
+    color: #f23a2e;
+}
+
+.ftco-feature-1 .ftco-feature-1-text {
+    padding: 30px;
+}
+
+.flaticon-fit:before {
+    content: "\f100";
+}
+
+.flaticon-gym-1:before {
+    content: "\f101";
+}
+
+.flaticon-gym:before {
+    content: "\f102";
+}
+
+.flaticon-vegetables:before {
+    content: "\f103";
+}
+
+.flaticon-fruit-juice:before {
+    content: "\f104";
+}
+
+.flaticon-stationary-bike:before {
+    content: "\f105";
+}
+
+.card {
+    cursor: pointer
+}
+
+.card.hover,
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2)
+}
+
+.card[_ngcontent-tpl-c19] {
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
