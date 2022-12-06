@@ -13,13 +13,7 @@
                 <a [routerLink]="['/aboutUs']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item nav-link">Hakkımızda</a>
                 <a [routerLink]="['/services']" [routerLinkActive]="['active']" class="nav-item nav-link">Hizmetlerimiz</a>
                 <a [routerLink]="['/gallery']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item nav-link">Galeri</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu text-capitalize">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="single.html" class="dropdown-item">Blog Detail</a>
-                    </div>
-                </div>
+                <a [routerLink]="['/blog']" [routerLinkActive]="['active']" class="nav-item nav-link">Bloglarımız</a>
                 <a [routerLink]="['/contact']" [routerLinkActive]="['active']" class="nav-item nav-link">İletişim</a>
             </div>
         </div>
