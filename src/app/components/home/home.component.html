@@ -7,7 +7,7 @@
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Şehirdeki En İyi Spor Salonu</h2>
-                    <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Bize Katıl</a>
+                    <a [routerLink]="['/contact']" routerLinkActive="router-link-active" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Bize Katıl</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -15,7 +15,7 @@
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">İstediğin Formu Arena İle Yakala!</h2>
-                    <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Bize Katıl</a>
+                    <a [routerLink]="['/contact']" routerLinkActive="router-link-active" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Bize Katıl</a>
                 </div>
             </div>
         </div>
@@ -29,10 +29,10 @@
             <div class="d-md-flex align-items-center">
                 <div class="hours mr-md-4 mb-4 mb-lg-0">
                     <p class="d-block">Çalışma Saatlerimiz</p> <br>
-                    <p class="d-block">Açılış: 10:00 — Kapanış: 00:00</p>
+                    <p class="d-block">Hafta içi : 10.30-24.00<br>Cumartesi : 10-30-22.00 <br>Pazar : 12.00-20.00</p>
                 </div>
                 <div class="cta ml-auto">
-                    <a href="#contact-section" class="smoothscroll d-flex d-md-flex align-items-center btn">
+                    <a href="http://wa.me/message/BL7R6MWJXWFQO1" class="smoothscroll d-flex d-md-flex align-items-center btn">
                         <span class="mx-auto">  <span>Bizimle İletişime Geçin</span></span>
                     </a>
                 </div>
@@ -43,7 +43,7 @@
 <!-- Carousel End -->
 
 
-<!-- Gym Class Start -->
+
 <div class="container gym-class mb-5">
     <div class="row px-3">
         <div class="col-md-6 p-0">
@@ -53,7 +53,7 @@
                 <p>
                     Vücut geliştirme, çoğunlukla ağırlık kaldırarak ve kas kütlesini artışını destekleyecek şekilde beslenerek vücut şekillendirme amaçlanan bir spor dalıdır. Eğer vücut geliştirme hayaliniz varsa uzman ekibiyle Arena Spor Salonu tam aradığınız yer.
                 </p>
-                <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Bize Katıl</a>
+                <a [routerLink]="['/contact']" routerLinkActive="router-link-active" class="btn btn-lg btn-outline-light mt-4 px-4">Bize Katıl</a>
             </div>
         </div>
         <div class="col-md-6 p-0">
@@ -64,17 +64,17 @@
                     Bizce sağlıklı yaşamanın ilk adımı spor yapmaktır ve spor yapmak vücuttan daha çok mental olarak ruhunuza iyi gelir. Spor yaparken yapılan en büyük hata diyetten uzak bir yol çizmektir. Bu sporu yaparken nasıl bir antrenman programı uygulamalısınız ya
                     da nasıl beslenmelisiniz gibi sorular hakkında herhangi bir fikriniz yoksa ek ücret talep etmeden spor salonumuzda size danışmanlık hizmeti sunmaktan memnuniyet duyarız.
                 </p>
-                <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Bize Katıl</a>
+                <a [routerLink]="['/contact']" routerLinkActive="router-link-active" class="btn btn-lg btn-outline-light mt-4 px-4">Bize Katıl</a>
             </div>
         </div>
     </div>
 </div>
-<!-- Gym Class End -->
 
 
 
 
-<!-- GYM Feature Start -->
+
+
 <div class="container feature pt-5">
     <div class="d-flex flex-column text-center mb-5">
         <h4 class="text-primary font-weight-bold">Neden Bizi Seçmelisiniz ?</h4>
@@ -132,23 +132,6 @@
         </div>
     </div>
 </div>
-<!-- GYM Feature End -->
-
-
-<!-- Subscribe Start -->
-<div class="subscribe container-fluid my-5 py-5 text-center">
-    <h4 class="display-4 text-white font-weight-bold mt-5 mb-3">Subscribe Our Newsletter</h4>
-    <p class="text-white mb-4">Subscribe and get Our latest article in your inbox</p>
-    <form class="form-inline justify-content-center mb-5">
-        <div class="input-group">
-            <input type="text" class="form-control-lg" placeholder="Your Email">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">Subscribe</button>
-            </div>
-        </div>
-    </form>
-</div>
-<!-- Subscribe End -->
 
 
 
@@ -205,11 +188,11 @@
 <!-- Team Start -->
 <div class="container pt-5 team">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Our Trainers</h4>
-        <h4 class="display-4 font-weight-bold">Meet Our Expert Trainers</h4>
+        <h4 class="text-primary font-weight-bold">Antrenörlerimiz</h4>
+        <h4 class="display-4 font-weight-bold">Uzman Antrenör Kadromuzla Tanışın!</h4>
     </div>
     <div class="row">
-        <div class="col-lg-3 col-md-6 mb-5">
+        <div class="col-lg-3 col-md-6 mb-5 ml-5">
             <div class="card border-0 bg-secondary text-center text-white">
                 <img class="card-img-top" src="./assets/img/team-1.jpg" alt="">
                 <div class="card-social d-flex align-items-center justify-content-center">
@@ -219,12 +202,12 @@
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
+                    <h4 class="card-title text-primary">Antrenör İsmi</h4>
+                    <p class="card-text">Antrenör</p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5">
+        <div class="col-lg-3 col-md-6 mb-5 ml-4">
             <div class="card border-0 bg-secondary text-center text-white">
                 <img class="card-img-top" src="./assets/img/team-2.jpg" alt="">
                 <div class="card-social d-flex align-items-center justify-content-center">
@@ -234,38 +217,8 @@
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="./assets/img/team-3.jpg" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="./assets/img/team-4.jpg" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
+                    <h4 class="card-title text-primary">Antrenör İsmi</h4>
+                    <p class="card-text">Antrenör</p>
                 </div>
             </div>
         </div>
@@ -340,11 +293,10 @@
 <!-- Testimonial End -->
 
 
-<!-- Blog Start -->
 <div class="container pt-5">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Our Blog</h4>
-        <h4 class="display-4 font-weight-bold">Latest Article From Blog</h4>
+        <h4 class="text-primary font-weight-bold">Bloglarımız</h4>
+        <h4 class="display-4 font-weight-bold">En Son Yayınlanan Bloglar</h4>
     </div>
     <div class="row">
         <div class="col-lg-6 mb-5 blog-item">
@@ -355,17 +307,9 @@
                     <strong class="text-uppercase m-0 text-white">Jan</strong>
                     <small>2045</small>
                 </div>
-                <div class="pl-3">
-                    <h3 class="font-weight-bold">Lorem ipsum dolor sit amet</h3>
-                    <div class="d-flex">
-                        <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
-                    </div>
-                </div>
             </div>
             <p>Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos, sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod vero dolor sed kasd accusam</p>
-            <a class="btn btn-outline-primary mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
+            <a class="btn btn-outline-primary mt-2 px-3" href="">Daha Fazlası <i class="fa fa-angle-right"></i></a>
         </div>
         <div class="col-lg-6 mb-5 blog-item">
             <img class="img-fluid mb-4" src="./assets/img/blog-2.jpg" alt="Image">
@@ -375,18 +319,9 @@
                     <strong class="text-uppercase m-0 text-white">Jan</strong>
                     <small>2045</small>
                 </div>
-                <div class="pl-3">
-                    <h3 class="font-weight-bold">Lorem ipsum dolor sit amet</h3>
-                    <div class="d-flex">
-                        <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
-                    </div>
-                </div>
             </div>
             <p>Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos, sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod vero dolor sed kasd accusam</p>
-            <a class="btn btn-outline-primary mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
+            <a class="btn btn-outline-primary mt-2 px-3" href="">Daha Fazlası <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </div>
-<!-- Blog End -->
