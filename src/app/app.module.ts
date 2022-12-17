@@ -10,12 +10,19 @@ import { GalleryModule } from './components/galery/galery.module';
 import { HomeModule } from './components/home/home.module';
 import { FooterModule } from './components/footer/footer.module';
 import { NavBarModule } from './components/nav-bar/nav-bar.module';
-import { ServicesComponent } from './components/services/services.component';
+import { ServicesModule } from './components/services/services.module';
+import { AdminBlogModule } from './admin-panel/admin-blog/admin-blog.module';
+import { AdminFooterModule } from './admin-panel/admin-footer/admin-footer.module';
+import { AdminGalleryModule } from './admin-panel/admin-gallery/admin-gallery.module';
+import { AdminNavbarModule } from './admin-panel/admin-navbar/admin-navbar.module';
+import { AdminPriceModule } from './admin-panel/admin-price/admin-price.module';
+import { LoginModule } from './admin-panel/login/login.module';
+import { LoginService } from './admin-panel/login/login.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ServicesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,15 @@ import { ServicesComponent } from './components/services/services.component';
     BlogModule,
     AboutModule,
     NavBarModule,
-    FooterModule
+    FooterModule,
+    ServicesModule,
+    AdminBlogModule,
+    AdminFooterModule,
+    AdminGalleryModule,
+    AdminNavbarModule,
+    AdminPriceModule,
+    LoginModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
