@@ -28,7 +28,7 @@ export class AdminBlogService {
   }
 
   createBlog(blog:IBlog){
-    return this.http.post(this.baseUrl+'blog/updateblog',blog).subscribe(
+    return this.http.post(this.baseUrl+'blog/createblog',blog).subscribe(
       (response:IBlog)=>{
           return response;
     },error=>{
@@ -36,6 +36,22 @@ export class AdminBlogService {
     });
   }
 
+
+  updateBlog(blog:IBlog){
+    return this.http.post(this.baseUrl+'Blog/updateBlog',blog).subscribe( 
+      (response:IBlog)=>{
+       return response;
+      },error=>{
+      console.log(error);
+    });
+  }
+
+
+  deleteBlog(id:number){
+    return this.http.delete(this.baseUrl+'blog?id='+id).subscribe(()=>{
+      window.location.reload();
+    }); 
+  }
 
 
 }

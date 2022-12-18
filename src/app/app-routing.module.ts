@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminBlogComponent } from './admin-panel/admin-blog/admin-blog.component';
+import { BlogUpdateComponent } from './admin-panel/admin-blog/blog-update/blog-update.component';
 import { LoginComponent } from './admin-panel/login/login.component';
 import { AboutComponent } from './components/about/about.component';
 import { BlogComponent } from './components/blog/blog.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'blog',component:BlogComponent},
   {path:'login',component:LoginComponent},
-  {path:'admin-blog', canActivate:[AuthGuard],component:AdminBlogComponent}
+  {path:'admin-blog', canActivate:[AuthGuard],component:AdminBlogComponent},
+  {path:'blog-update/:id',component:BlogUpdateComponent},
 ];
 
 @NgModule({

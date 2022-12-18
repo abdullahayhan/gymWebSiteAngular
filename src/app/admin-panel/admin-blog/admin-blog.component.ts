@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Blog, IBlog } from 'src/app/core/models/blog';
 import { AdminBlogService} from './admin.blog.service';
 
@@ -12,7 +13,7 @@ export class AdminBlogComponent implements OnInit {
   blogs : any;
 
 
-  constructor(private adminService:AdminBlogService){}
+  constructor(private adminService:AdminBlogService, private route: Router){}
 
   ngOnInit(): void {
     this.getBlogs();
@@ -26,9 +27,13 @@ export class AdminBlogComponent implements OnInit {
     })
   }
   
-
-  getBlog(){
-
+  deleteBlog(id:number){
+    this.adminService.deleteBlog(id);
   }
+
+ 
+
+
+
 
 }
