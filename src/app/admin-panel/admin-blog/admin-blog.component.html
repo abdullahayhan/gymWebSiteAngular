@@ -12,3 +12,27 @@
     </div>
 </div>
 <!-- Page Header End -->
+
+<div class="container">
+    <a class="btn btn-primary" style="float:right">Yeni Ekle</a>
+    <h3 class="text-center">Blog Listeleme Sayfası</h3>
+    <div class="row">
+        <div class="col-lg-6 mb-5 blog-item" *ngFor="let item of blogs">
+            <img class="img-fluid mb-4" src={{item.pictureUrl}} alt="Image">
+            <div class="d-flex align-items-center mb-4">
+                <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                    <small>{{item.createdDate.substring(0, item.createdDate.indexOf(","))}}</small>
+                    <strong class="text-uppercase m-0 text-white">{{item.createdDate.substring(item.createdDate.indexOf(" "), item.createdDate.search("2022"))}}</strong>
+                    <small>{{item.createdDate.substring(item.createdDate.search("2022"))}}</small>
+                </div>
+                <div class="pl-3">
+                    <h3 class="font-weight-bold" style="color: black;">{{item.header}}</h3>
+                </div>
+            </div>
+            <p>{{item.body}}</p>
+            <td>
+                <a class="big-icon"><i class="bi bi-pencil-square"></i></a>
+                <a class="big-icon margin-icon"><i class="bi bi-x-circle-fill"></i></a>
+            </td>
+        </div>
+    </div>
