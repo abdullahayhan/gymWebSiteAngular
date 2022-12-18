@@ -4,6 +4,7 @@ import { AdminBlogComponent } from './admin-blog.component';
 import { RouterModule } from '@angular/router';
 import { AdminNavbarModule } from "../admin-navbar/admin-navbar.module";
 import { BlogUpdateComponent } from './blog-update/blog-update.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,7 @@ import { BlogUpdateComponent } from './blog-update/blog-update.component';
     exports: [AdminBlogComponent,BlogUpdateComponent],
     imports: [
         CommonModule, RouterModule,
-        AdminNavbarModule
+        AdminNavbarModule,FormsModule,ReactiveFormsModule
     ]
 })
 export class AdminBlogModule { }

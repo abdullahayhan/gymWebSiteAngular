@@ -15,19 +15,20 @@
 
 <div class="container mb-4">
     <h3 class="text-center">Blog Güncelleme Sayfası</h3>
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="updateBlog()">
         <div class="mb-3">
             <label class="form-label">Başlık</label>
-            <input type="text" class="form-control" value="{{blog.header}}" />
+            <input type="text" formControlName="header" class="form-control" />
         </div>
         <div class="mb-3">
-            <label class="form-label" asp-for="product.SmallDescp">İçerik</label>
-            <input type="text" class="form-control" value="{{blog.body}}" />
+            <label class="form-label">İçerik</label>
+            <input type="text" formControlName="body" class="form-control" />
         </div>
         <div class="mb-3">
-            <label class="form-label" asp-for="product.Description">Fotoğraf</label>
-            <input type="text" class="form-control" value="{{blog.pictureUrl}}" />
+            <label class="form-label">Fotoğraf</label>
+            <input type="text" formControlName="pictureUrl" class="form-control" />
         </div>
         <button type="submit" class="btn btn-primary">Güncelle</button>
+        <a [routerLink]="['/admin-blog']" routerLinkActive="router-link-active">Anasayfaya dön</a>
     </form>
 </div>

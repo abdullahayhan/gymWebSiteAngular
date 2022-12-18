@@ -19,6 +19,7 @@ import { AdminPriceModule } from './admin-panel/admin-price/admin-price.module';
 import { LoginModule } from './admin-panel/login/login.module';
 import { LoginService } from './admin-panel/login/login.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,9 +40,11 @@ import { HttpClientModule } from '@angular/common/http';
     AdminFooterModule,
     AdminGalleryModule,
     AdminNavbarModule,
+    AdminBlogModule,
     AdminPriceModule,
     LoginModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
