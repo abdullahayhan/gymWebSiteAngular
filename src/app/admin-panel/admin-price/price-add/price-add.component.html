@@ -1,0 +1,30 @@
+<div class="container">
+    <div>
+        <div class="submit-form">
+            <div *ngIf="!submitted">
+                <div class="form-group">
+                    <label for="oneMonth">1 Aylık Fiyat</label>
+                    <input type="number" class="form-control" id="oneMonth" required [(ngModel)]="price.priceForMonth" name="oneMonth" />
+                </div>
+                <div class="form-group">
+                    <label for="threeMonth">3 Aylık Fiyat</label>
+                    <input type="text" class="form-control" id="threeMonth" required [(ngModel)]="price.priceForThreeMonth" name="pictureUrl" />
+                </div>
+                <div class="form-group">
+                    <label for="sixMonth">6 Aylık Fiyat</label>
+                    <input class="form-control" id="sixMonth" required [(ngModel)]="price.priceForSixMonths" name="sixMonth" />
+                </div>
+                <div class="form-group">
+                    <label for="oneYear">1 Senelik Fiyat</label>
+                    <input class="form-control" id="oneYear" required [(ngModel)]="price.priceForYear" required name="oneYear" />
+                </div>
+                <button (click)="createPrice()" class="btn btn-success">Kaydet</button>
+            </div>
+
+            <div *ngIf="submitted">
+                <h4>Price was submitted successfully!</h4>
+                <button class="btn btn-success ml-4" routerLink="/admin-price">Fiyat Sayfasına Dön</button>
+            </div>
+        </div>
+    </div>
+</div>

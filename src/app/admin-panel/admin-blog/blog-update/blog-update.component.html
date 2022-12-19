@@ -13,7 +13,8 @@
 </div>
 <!-- Page Header End -->
 
-
+<a [routerLink]="['/admin-blog']" routerLinkActive="router-link-active" class="ml-4" style="text-align: center;">
+    <i style="font-size: 30px; text-align:center; color: green;" class="fa fa-chevron-circle-left mt-2" aria-hidden="true"><span style="font-size: 25px;"> Geri Don</span></i></a>
 <div *ngIf="blog.id" class="edit-form mb-4">
     <form>
         <div class="form-group">

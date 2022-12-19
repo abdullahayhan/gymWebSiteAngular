@@ -44,7 +44,7 @@ import { FormsModule } from '@angular/forms';
     AdminPriceModule,
     LoginModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

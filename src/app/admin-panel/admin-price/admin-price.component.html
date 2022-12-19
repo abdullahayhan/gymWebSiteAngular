@@ -1,1 +1,43 @@
-<p>admin-price works!</p>
+<app-admin-navbar>
+</app-admin-navbar>
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Fiyat Güncelleme</h4>
+        <div class="d-inline-flex">
+            <p class="m-0 text-white"><a class="text-white" [routerLink]="['/admin-blog']">Admin Paneli</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Fiyat Güncelleme</p>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<div class="container" style="margin-bottom: 100px;">
+    <h4 class="text-center mt-5">Fiyat Sayfası</h4>
+    <a [routerLink]="['/price-add']" routerLinkActive="router-link-active" class="btn btn-primary" style="float:right">Yeni Ekle</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>1 Aylık Ücret</th>
+                <th>3 Aylık Ücret</th>
+                <th>6 Aylık Ücret</th>
+                <th>1 Senelik Ücret</th>
+            </tr>
+        </thead>
+        <tbody class="labelSize">
+            <tr>
+                <th>{{price.id}}</th>
+                <td>{{price.priceForMonth}}</td>
+                <td>{{price.priceForThreeMonth}}</td>
+                <td>{{price.priceForSixMonths}}</td>
+                <td>{{price.priceForYear}}</td>
+                <td>
+                    <a [routerLink]="['/price-update']" routerLinkActive="router-link-active" style="margin-left: 28rem!important; font-size: 40px; color:red"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

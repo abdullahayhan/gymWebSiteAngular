@@ -11,8 +11,10 @@
                     <input type="text" class="form-control" id="pictureUrl" required [(ngModel)]="blog.pictureUrl" name="pictureUrl" />
                 </div>
                 <div class="form-group">
-                    <label for="description">İçerik</label>
-                    <input class="form-control" id="description" required [(ngModel)]="blog.body" name="description" />
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="description">İçerik</mat-label>
+                        <textarea rows="4" cols="50" matInput class="form-control" id="description" required [(ngModel)]="blog.body" name="description"></textarea>
+                    </mat-form-field>
                 </div>
 
                 <button (click)="createBlog()" class="btn btn-success">Kaydet</button>

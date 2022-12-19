@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { IBlog } from 'src/app/core/models/blog';
 import { AdminBlogService } from '../admin.blog.service';
@@ -31,14 +30,12 @@ export class BlogUpdateComponent implements OnInit {
 
 
   updateBlog() 
-  {
-    this.message = '';
-    
+  { 
     this.blogService.updateBlog(this.blog)
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.message = 'This tutorial was updated successfully!';
+          this.message = 'This blog was updated successfully!';
         },
         error: (e) => console.error(e)
       });

@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminBlogComponent } from './admin-panel/admin-blog/admin-blog.component';
 import { BlogAddComponent } from './admin-panel/admin-blog/blog-add/blog-add.component';
 import { BlogUpdateComponent } from './admin-panel/admin-blog/blog-update/blog-update.component';
+import { AdminPriceComponent } from './admin-panel/admin-price/admin-price.component';
+import { PriceAddComponent } from './admin-panel/admin-price/price-add/price-add.component';
+import { PriceUpdateComponent } from './admin-panel/admin-price/price-update/price-update.component';
 import { LoginComponent } from './admin-panel/login/login.component';
 import { AboutComponent } from './components/about/about.component';
 import { BlogComponent } from './components/blog/blog.component';
@@ -23,6 +26,9 @@ const routes: Routes = [
   {path:'admin-blog', canActivate:[AuthGuard],component:AdminBlogComponent},
   {path:'blog-update/:id',component:BlogUpdateComponent},
   {path:'blog-add',component:BlogAddComponent},
+  {path:'admin-price',component:AdminPriceComponent},
+  {path:'price-add',component:PriceAddComponent},
+  {path:'price-update',component:PriceUpdateComponent},
 ];
 
 @NgModule({

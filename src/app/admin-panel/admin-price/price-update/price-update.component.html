@@ -1,0 +1,30 @@
+<div class="container" style="margin-bottom: 100px;">
+    <a [routerLink]="['/admin-price']" routerLinkActive="router-link-active" style="text-align: center;">
+        <i style="font-size: 30px; text-align:center; color: green;" class="fa fa-chevron-circle-left mt-2" aria-hidden="true"><span style="font-size: 25px;"> Geri Don</span></i></a>
+    <div *ngIf="price.id" class="edit-form mt-5">
+        <h4 class="text-center" style="font-size: 40px;">Fiyat Güncelleme</h4>
+        <form class="mt-2">
+            <div class="form-group">
+                <label for="oneMonth" class="labelSize2">1 Aylık Fiyat</label>
+                <input type="number" class="form-control labelSize" id="oneMonth" [(ngModel)]="price.priceForMonth" name="oneMonth" />
+            </div>
+            <div class="form-group">
+                <label for="threeMonth" class="labelSize2">3 Aylık Fiyat</label>
+                <input type="number" class="form-control labelSize" id="threeMonth" [(ngModel)]="price.priceForThreeMonth" name="threeMonth" />
+            </div>
+            <div class="form-group">
+                <label for="sixMonth" class="labelSize2">6 Aylık Fiyat</label>
+                <input type="number" class="form-control labelSize" id="sixMonth" [(ngModel)]="price.priceForSixMonths" name="sixMonth" />
+            </div>
+            <div class="form-group">
+                <label for="oneYear" class="labelSize2">1 Senelik Fiyat</label>
+                <input type="number" class="form-control labelSize" id="oneYear" [(ngModel)]="price.priceForYear" name="oneYear" />
+            </div>
+        </form>
+
+        <button type="submit" class="btn btn-success" (click)="updatePrice()">
+        Güncelle
+      </button>
+        <p>{{ message }}</p>
+    </div>
+</div>
