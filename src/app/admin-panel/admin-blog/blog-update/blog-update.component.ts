@@ -12,20 +12,14 @@ import { AdminBlogService } from '../admin.blog.service';
 export class BlogUpdateComponent implements OnInit {
 
   blog:IBlog;
-  loginForm : FormGroup;
+  message = '';
+
 
   constructor(private blogService:AdminBlogService, private activeRoute:ActivatedRoute){}
   ngOnInit(): void {
-    this.createLoginForm();
     this.loadCurrentBlog();
-    
   }
 
-  updateBlog(){
-    this.blog = this.loginForm.value;
-    this.blog.id = +this.activeRoute.snapshot.paramMap.get('id'); 
-    this.blogService.updateBlog(this.blog);
-  }
 
   loadCurrentBlog(){
     this.blogService.getBlog(+this.activeRoute.snapshot.paramMap.get('id')).subscribe(blog=>{
@@ -34,14 +28,22 @@ export class BlogUpdateComponent implements OnInit {
       console.log(error);
     })
   } 
-  
-  createLoginForm(){
-    this.loginForm = new FormGroup({
-      header : new FormControl(),
-      body : new FormControl(),
-      pictureUrl: new FormControl()
-    });
+
+
+  updateBlog() 
+  {
+    this.message = '';
+    
+    this.blogService.updateBlog(this.blog)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.message = 'This tutorial was updated successfully!';
+        },
+        error: (e) => console.error(e)
+      });
   }
+
 
 
 }

@@ -13,22 +13,25 @@
 </div>
 <!-- Page Header End -->
 
-<div class="container mb-4">
-    <h3 class="text-center">Blog Güncelleme Sayfası</h3>
-    <form [formGroup]="loginForm" (ngSubmit)="updateBlog()">
-        <div class="mb-3">
-            <label class="form-label">Başlık</label>
-            <input type="text" formControlName="header" class="form-control" />
+
+<div *ngIf="blog.id" class="edit-form mb-4">
+    <form>
+        <div class="form-group">
+            <label for="title">Başlık</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="blog.header" name="title" />
         </div>
-        <div class="mb-3">
-            <label class="form-label">İçerik</label>
-            <input type="text" formControlName="body" class="form-control" />
+        <div class="form-group">
+            <label for="pictureUrl">Fotoğraf</label>
+            <input type="text" class="form-control" id="pictureUrl" [(ngModel)]="blog.pictureUrl" name="pictureUrl" />
         </div>
-        <div class="mb-3">
-            <label class="form-label">Fotoğraf</label>
-            <input type="text" formControlName="pictureUrl" class="form-control" />
+        <div class="form-group">
+            <label for="description">İçerik</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="blog.body" name="description" />
         </div>
-        <button type="submit" class="btn btn-primary">Güncelle</button>
-        <a [routerLink]="['/admin-blog']" routerLinkActive="router-link-active">Anasayfaya dön</a>
     </form>
+
+    <button type="submit" class="badge-success" (click)="updateBlog()">
+        Güncelle
+      </button>
+    <p>{{ message }}</p>
 </div>

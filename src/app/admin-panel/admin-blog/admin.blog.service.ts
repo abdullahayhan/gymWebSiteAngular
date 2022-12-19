@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-import { Blog, IBlog } from 'src/app/core/models/blog';
+import { Blog, BlogDto, IBlog } from 'src/app/core/models/blog';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -27,23 +27,24 @@ export class AdminBlogService {
     return this.http.get<IBlog>(this.baseUrl+'Blog/'+id);
   }
 
-  createBlog(blog:IBlog){
-    return this.http.post(this.baseUrl+'blog/createblog',blog).subscribe(
-      (response:IBlog)=>{
-          return response;
-    },error=>{
-      console.log(error);
-    });
+  createBlog(blog:BlogDto){
+    return this.http.post(this.baseUrl+'blog/createblog',blog).pipe(
+      map(response=>{
+        return response;
+      },error=>{
+        console.log('blog oluşturulurken hata: ',error);
+      })
+    );
   }
 
 
   updateBlog(blog:IBlog){
-    return this.http.post(this.baseUrl+'Blog/updateBlog',blog).subscribe( 
-      (response:IBlog)=>{
+    return this.http.post(this.baseUrl+'Blog/updateBlog',blog).pipe( 
+      map(response=>{
        return response;
       },error=>{
       console.log(error);
-    });
+    }));
   }
 
 

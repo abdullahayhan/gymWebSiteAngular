@@ -10,3 +10,9 @@ export interface IBlog {
         data: IBlog[];
     }
 
+    export class BlogDto{
+        pictureUrl: string;
+        header: string;
+        body: string;
+    }
+

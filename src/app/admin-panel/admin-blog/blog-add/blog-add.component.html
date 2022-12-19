@@ -1,0 +1,28 @@
+<div class="container">
+    <div>
+        <div class="submit-form">
+            <div *ngIf="!submitted">
+                <div class="form-group">
+                    <label for="title">Başlık</label>
+                    <input type="text" class="form-control" id="title" required [(ngModel)]="blog.header" name="title" />
+                </div>
+                <div class="form-group">
+                    <label for="pictureUrl">Fotoğraf Linki</label>
+                    <input type="text" class="form-control" id="pictureUrl" required [(ngModel)]="blog.pictureUrl" name="pictureUrl" />
+                </div>
+                <div class="form-group">
+                    <label for="description">İçerik</label>
+                    <input class="form-control" id="description" required [(ngModel)]="blog.body" name="description" />
+                </div>
+
+                <button (click)="createBlog()" class="btn btn-success">Kaydet</button>
+            </div>
+
+            <div *ngIf="submitted">
+                <h4>Blog was submitted successfully!</h4>
+                <button class="btn btn-success" (click)="newBlog()">Yeni</button>
+                <button class="btn btn-success ml-4" routerLink="/admin-blog">Blog Listesine Dön</button>
+            </div>
+        </div>
+    </div>
+</div>
