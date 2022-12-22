@@ -27,7 +27,7 @@ export class LoginService {
     return this.http.get(this.baseUrl+'account',{headers}).pipe(
       map((user:User)=>{
         if (user) {
-          localStorage.setItem('token',user.token);
+          window.localStorage.setItem('token',user.token);
           this.currentUserSource.next(user);
         }
       })
@@ -39,7 +39,7 @@ export class LoginService {
     return this.http.post(this.baseUrl+'account/login',values).pipe(
       map((user:User)=>{
         if (user) {
-          localStorage.setItem('token',user.token);
+          window.localStorage.setItem('token',user.token);
           this.currentUserSource.next(user);
         }
       })
@@ -49,7 +49,7 @@ export class LoginService {
 
 
   loginOut(){
-    localStorage.removeItem('token');
+    window.localStorage.removeItem('token');
     this.currentUserSource.next(null);
     this.router.navigateByUrl('/');
   }

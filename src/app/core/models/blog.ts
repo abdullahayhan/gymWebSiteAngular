@@ -1,6 +1,5 @@
 export interface IBlog {
         id: number;
-        pictureUrl: string;
         header: string;
         body: string;
         createdDate: string;
@@ -11,7 +10,6 @@ export interface IBlog {
     }
 
     export class BlogDto{
-        pictureUrl: string;
         header: string;
         body: string;
     }

@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminBlogComponent } from './admin-panel/admin-blog/admin-blog.component';
 import { BlogAddComponent } from './admin-panel/admin-blog/blog-add/blog-add.component';
 import { BlogUpdateComponent } from './admin-panel/admin-blog/blog-update/blog-update.component';
-import { AdminGalleryComponent } from './admin-panel/admin-gallery/admin-gallery.component';
 import { AdminPriceComponent } from './admin-panel/admin-price/admin-price.component';
 import { PriceAddComponent } from './admin-panel/admin-price/price-add/price-add.component';
 import { PriceUpdateComponent } from './admin-panel/admin-price/price-update/price-update.component';
@@ -25,12 +24,11 @@ const routes: Routes = [
   {path:'blog',component:BlogComponent},
   {path:'login',component:LoginComponent},
   {path:'admin-blog', canActivate:[AuthGuard],component:AdminBlogComponent},
-  {path:'blog-update/:id',component:BlogUpdateComponent},
-  {path:'blog-add',component:BlogAddComponent},
-  {path:'admin-price',component:AdminPriceComponent},
-  {path:'price-add',component:PriceAddComponent},
-  {path:'price-update',component:PriceUpdateComponent},
-  {path:'gallery-add',component:AdminGalleryComponent},
+  {path:'blog-update/:id', canActivate:[AuthGuard],component:BlogUpdateComponent},
+  {path:'blog-add', canActivate:[AuthGuard],component:BlogAddComponent},
+  {path:'admin-price', canActivate:[AuthGuard],component:AdminPriceComponent},
+  {path:'price-add', canActivate:[AuthGuard],component:PriceAddComponent},
+  {path:'price-update', canActivate:[AuthGuard],component:PriceUpdateComponent}
 ];
 
 @NgModule({

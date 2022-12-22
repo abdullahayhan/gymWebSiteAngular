@@ -20,10 +20,9 @@
         <div class="col-lg-6 mb-5 blog-item" *ngFor="let item of blogs">
             <a style="margin-left: 28rem!important; font-size: 40px; color:red" routerLink="/blog-update/{{item.id}}" routerLinkActive="router-link-active"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
             <a (click)="deleteBlog((item.id))" class="ml-2"><i class="fa fa-trash" style="font-size: 40px; color:red"></i></a>
-            <img class="img-fluid mb-4" src={{item.pictureUrl}} alt="Image">
             <div class="d-flex align-items-center mb-4">
                 <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 90px; height: 85px;">
-                    <small>{{item.createdDate.substring(0, item.createdDate.indexOf(","))}}</small>
+                    <small class="mt-2">{{item.createdDate.substring(0, item.createdDate.indexOf(","))}}</small>
                     <strong class="text-uppercase m-0 text-white">{{item.createdDate.substring(item.createdDate.indexOf(" "), item.createdDate.search("2022"))}}</strong>
                     <small>{{item.createdDate.substring(item.createdDate.search("2022"))}}</small>
                 </div>
