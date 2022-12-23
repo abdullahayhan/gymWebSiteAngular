@@ -23,6 +23,7 @@
     </div>
     <div class="row">
         <div class="col-lg-6 mb-5 blog-item" *ngFor="let item of blogs">
+            <img class="img-fluid mb-4" src={{item.picturePath}} alt="Image">
             <div class="d-flex align-items-center mb-4">
                 <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 90px; height: 85px;">
                     <small class="mt-2">{{item.createdDate.substring(0, item.createdDate.indexOf(","))}}</small>

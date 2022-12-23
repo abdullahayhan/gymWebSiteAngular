@@ -18,6 +18,7 @@
     <h3 class="text-center">Blog Listeleme Sayfası</h3>
     <div class="row">
         <div class="col-lg-6 mb-5 blog-item" *ngFor="let item of blogs">
+            <img class="img-fluid mb-4" src={{item.picturePath}} alt="Image">
             <a style="margin-left: 28rem!important; font-size: 40px; color:red" routerLink="/blog-update/{{item.id}}" routerLinkActive="router-link-active"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
             <a (click)="deleteBlog((item.id))" class="ml-2"><i class="fa fa-trash" style="font-size: 40px; color:red"></i></a>
             <div class="d-flex align-items-center mb-4">

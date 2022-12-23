@@ -10,7 +10,8 @@ import { AdminBlogService } from '../admin.blog.service';
 export class BlogAddComponent {
   blog : BlogDto = {
     body:'',
-    header:''
+    header:'',
+    picturePath:''
   }
   submitted = false;
 
@@ -19,7 +20,8 @@ export class BlogAddComponent {
   createBlog(){
     const data ={
       body: this.blog.body,
-      header: this.blog.header
+      header: this.blog.header,
+      picturePath:this.blog.picturePath
     }
     this.blogService.createBlog(data).subscribe({
       next: (res) => {
@@ -35,7 +37,8 @@ export class BlogAddComponent {
     this.submitted=false;
     this.blog={
       body:'',
-      header:''
+      header:'',
+      picturePath:''
     };
   }
 }
